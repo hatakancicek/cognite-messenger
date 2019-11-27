@@ -45,7 +45,7 @@ function Chats({ messages, user, userID }) {
   });
 
   const thumbnails = Object.values(users).sort(
-    (a, b) => a.lastMessageAt - b.lastMessageAt
+    (a, b) => b.lastMessageAt - a.lastMessageAt
   );
 
   return (

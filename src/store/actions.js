@@ -1,5 +1,5 @@
 import { getMessages } from "../utils";
-import { SET_USER, SET_MESSAGES, CHANGE_CHAT } from "./types";
+import { SET_USER, SET_MESSAGES, CHANGE_CHAT, SEND_MESSAGE } from "./types";
 
 export function setUser({ user }) {
   return {
@@ -26,4 +26,12 @@ export function loadMessages() {
   const messages = getMessages();
 
   return setMessages({ messages });
+}
+
+export function sendMessage({ text, userID }) {
+  return {
+    type: SEND_MESSAGE,
+    userID,
+    text
+  };
 }
