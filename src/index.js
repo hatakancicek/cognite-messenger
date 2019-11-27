@@ -7,6 +7,10 @@ import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 
 import store from "./store";
+import { loadMessages, setUser } from "./store/actions";
+
+store.dispatch(loadMessages());
+store.dispatch(setUser({ user: 0 }));
 
 ReactDOM.render(
   <Provider store={store}>

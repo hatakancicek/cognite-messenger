@@ -2,7 +2,7 @@ import { SET_USER, SET_MESSAGES, CHANGE_CHAT } from "./types";
 
 const initialState = {
   messages: [],
-  userID: "",
+  userID: -1,
   user: null
 };
 
@@ -29,8 +29,8 @@ function handleSetMessages({ state, payload: { messages } }) {
 
 const HANDLERS = {
   [SET_USER]: handleSetUser,
-  [CHANGE_CHAT]: handleSetMessages,
-  [SET_MESSAGES]: handleChangeChat
+  [CHANGE_CHAT]: handleChangeChat,
+  [SET_MESSAGES]: handleSetMessages
 };
 
 export default function(state = initialState, { type, ...payload }) {

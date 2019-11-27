@@ -194,4 +194,4 @@ export const MESSAGES = [
   }
 ];
 
-export const USER = ["Atakan", "Valerii", "Etkanol"];
+export const USERS = ["Atakan", "Valerii", "Etkanol"];
