@@ -12,11 +12,11 @@ function Messages({ messages, userID }) {
   const dummy = React.useRef();
 
   // Anythime chat changes, we scroll to the bottom.
-  React.useEffect(
-    () =>
-      !!dummy.current && dummy.current.scrollIntoView({ behavior: "smooth" }),
-    [userID, messages]
-  );
+  React.useEffect(() => {
+    // This acts weird
+    // if(dummy.current)
+    // dummy.current.scrollIntoView({ behavior: "smooth" })
+  }, [userID, messages]);
 
   return (
     <>
